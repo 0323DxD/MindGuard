@@ -1,0 +1,121 @@
+.container {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.greeting {
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.date {
+  font-size: 14px;
+}
+
+.moodCard {
+  margin-bottom: 24px;
+}
+
+.moodGrid {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.moodBtn {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+
+.moodBtn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.moodEmoji {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.moodLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.sectionTitle {
+  margin-bottom: 16px;
+  color: var(--primary);
+}
+
+.actionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.actionCard {
+  margin-bottom: 0;
+}
+
+.actionBtn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.actionBtn:hover {
+  color: var(--primary);
+}
+
+.actionIcon {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.emergencyCard {
+  background: #ffebee;
+  border-left: 4px solid var(--alert);
+}
+
+.emergencyTitle {
+  display: block;
+  color: var(--alert);
+  margin-bottom: 4px;
+}
+
+.emergencyText {
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: #c62828;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,23 @@
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.padding {
+  padding: 20px;
+}
+
+.title {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  color: var(--primary);
+}
