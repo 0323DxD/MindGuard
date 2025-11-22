@@ -20,7 +20,7 @@ function App() {
   return (
     <ThemeProvider>
       <AuthProvider>
-        <Router>
+        <Router basename="/mindguard">
           <div className="app-container">
             <Routes>
               <Route path="/" element={<Landing />} />
