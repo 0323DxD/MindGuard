@@ -57,7 +57,8 @@ body {
 .app-container {
   width: 100%;
   max-width: var(--max-width);
-  height: 100vh;
+  height: 100vh; /* Fallback */
+  height: 100dvh; /* Dynamic viewport height for mobile */
   max-height: 850px;
   background: var(--bg);
   border-radius: 28px;
@@ -68,11 +69,13 @@ body {
   position: relative;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .app-container {
     height: 100vh;
+    height: 100dvh;
     max-height: none;
     border-radius: 0;
+    max-width: none;
   }
 }
 
