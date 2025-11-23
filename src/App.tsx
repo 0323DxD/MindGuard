@@ -10,11 +10,11 @@ import { Signup } from './pages/Signup';
 import { Dashboard } from './pages/Dashboard';
 
 // Placeholder components for routes not yet implemented
-const Chat = () => <div className="p-4">Chat Feature Coming Soon</div>;
-const Wellness = () => <div className="p-4">Wellness Feature Coming Soon</div>;
-const Profile = () => <div className="p-4">Profile Feature Coming Soon</div>;
-const Groups = () => <div className="p-4">Groups Feature Coming Soon</div>;
-const Booking = () => <div className="p-4">Booking Feature Coming Soon</div>;
+import { Chat } from './pages/Chat';
+import { Wellness } from './pages/Wellness';
+import { Profile } from './pages/Profile';
+import { Groups } from './pages/Groups';
+import { Booking } from './pages/Booking';
 
 function App() {
   return (
