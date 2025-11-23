@@ -99,16 +99,16 @@ export const Chat: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-full">
-      <div className="flex items-center gap-2 mb-4">
+    <div className="flex flex-col h-full relative">
+      <div className="flex items-center gap-2 mb-4 shrink-0">
         <Button variant="ghost" size="sm" onClick={() => navigate('/dashboard')}>
           ←
         </Button>
         <h3 className="text-xl font-bold text-primary m-0">MindGuard AI</h3>
       </div>
 
-      <Card className="flex-1 flex flex-col overflow-hidden" style={{ height: 'calc(100vh - 180px)' }}>
-        <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3">
+      <Card className="flex-1 flex flex-col overflow-hidden relative" padding={false}>
+        <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 pb-20">
           {messages.map((msg) => (
             <div
               key={msg.id}
@@ -129,15 +129,18 @@ export const Chat: React.FC = () => {
           <div ref={messagesEndRef} />
         </div>
 
-        <div className="border-t border-gray-100 p-3 bg-white">
-          <form onSubmit={handleSend} className="flex gap-2">
-            <Input
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-              placeholder="Type here..."
-              className="flex-1 rounded-full"
-            />
-            <Button type="submit" className="rounded-xl px-4">
+        <div className="absolute bottom-0 left-0 right-0 border-t border-gray-100 p-3 bg-white">
+          <form onSubmit={handleSend} className="flex gap-2 items-center">
+            <div className="flex-1">
+              <Input
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                placeholder="Type here..."
+                className="w-full rounded-full"
+                style={{ marginBottom: 0 }} // Override default margin
+              />
+            </div>
+            <Button type="submit" className="rounded-xl px-6 h-[46px] shrink-0">
               Send
             </Button>
           </form>
