@@ -83,43 +83,6 @@ export const Chat: React.FC = () => {
         "Thank you for sharing that with me. How does that make you feel?",
         "It's okay to feel this way. I'm here to listen."
       ];
-      
-      addMessage(generic[Math.floor(Math.random() * generic.length)], 'ai');
-      setIsTyping(false);
-    }, 1000 + Math.random() * 1000);
-  };
-
-  const handleSend = (e?: React.FormEvent) => {
-    e?.preventDefault();
-    if (!inputValue.trim()) return;
-
-    const text = inputValue;
-    setInputValue('');
-    addMessage(text, 'user');
-    processAIResponse(text);
-  };
-
-
-
-// ... (keep interfaces and state logic same)
-
-  return (
-    <div className="flex flex-col h-full bg-gray-50">
-      {/* Header */}
-      <div className="flex items-center gap-3 px-4 py-3 shrink-0">
-        <button 
-          onClick={() => navigate('/dashboard')}
-          className="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full shadow-sm hover:bg-primary-light transition-colors"
-        >
-          <FaArrowLeft size={16} />
-        </button>
-        <h3 className="text-xl font-bold text-gray-800 m-0">MindGuard AI</h3>
-      </div>
-
-      {/* Chat Card */}
-      <div className="flex-1 bg-white rounded-[32px] shadow-sm flex flex-col overflow-hidden relative border border-gray-100">
-        <div className="flex-1 overflow-y-auto p-5 flex flex-col gap-4 pb-24">
-          {messages.map((msg) => (
             <div
               key={msg.id}
               className={`max-w-[85%] p-4 rounded-2xl text-[15px] leading-relaxed break-words ${
